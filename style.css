@@ -1,0 +1,231 @@
+/* *{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+  } */
+
+:root {
+
+    /* Color Styles */
+    --primary: #FBC257;
+    --primary-light: #FCCC73;
+    --dark-brown: #341413;
+    --gray-1: #798092;
+    --gray-2: #E6E6ED;
+    --white: #FFFFFF;
+
+    /* Font Size Desktop */
+    --header-1: 64px;
+    --header-2: 48px;
+    --header-3: 42px;
+    --header-4: 32px;
+
+    --text-medium: 18px;
+    --text-regular: 16px;
+    --text-light: 13px;
+
+    /* Font Weight */
+    --font-weight-bold: 700;
+    --font-weight-semi-bold: 600;
+    --font-weight-medium: 500;
+    --font-weight-regular: 400;
+    --font-weight-light: 300;
+}
+
+.navbar{
+    background-color: #fff;
+    height: 80px;
+    margin: 20px;
+    border-radius: 16px;
+    box-shadow: 0 2px 4px 0 #0000001a;
+    padding: 0 16px;
+    /* padding: 0.5rem; */
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--primary);
+    transition: 0.3s color;
+}
+
+.recommendation-button {
+    background-color: var(--primary);
+    color: #000;
+    font-size: 14px;
+    padding: 8px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s background-color;
+}
+
+.recommendation-button:hover {
+    background-color: var(--primary-light);
+}
+
+.navbar-toggler {
+    border: none;
+    font-size: 1.25rem;
+}
+
+.navbar-toggler:focus, .btn-close:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.nav-link{
+    color: #666777;
+    font-weight: 500;
+    position:relative;
+}
+.nav-link:hover, .nav-link.active {
+    color: #000;
+}
+@media (min-width: 992px) {
+    .nav-link::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: #007bff;
+        visibility: hidden;
+        /* background: transparent; */
+        transition: 0.3s ease-in-out;
+    }
+    .nav-link:hover::before, .nav-link.active::before{
+        visibility: visible;
+        width: 100%;
+    }
+}
+
+section.hero {
+    margin: 5rem 0;
+}
+
+.hero{
+    background: url('https://images.unsplash.com/photo-1549880338-65ddcdfd017b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80') no-repeat center;
+    background-size: cover;
+    width: 100%;
+    position: relative;
+    padding: 5rem 0;
+
+}
+.text-label,
+.text-hero-bold,
+.text-hero-regular {
+    margin: 24px 0;
+}
+
+.text-label {
+    color: var(--primary);
+    font-size: var(--text-regular);
+    font-weight: var(--font-weight-regular);
+    line-height: 31px;
+}
+
+.text-hero-bold {
+    color: var(--dark-brown);
+    font-size: var(--header-1);
+    font-weight: var(--font-weight-bold);
+    line-height: 74px;
+}
+
+.text-hero-regular {
+    color: var(--gray-1);
+    font-size: var(--text-regular);
+    font-weight: var(--font-weight-regular);
+    line-height: 31px;
+}
+
+.btn {
+    padding: 15px 25px;
+    border-radius: 6px;
+    font-size: var(--text-medium);
+    font-weight: var(--font-weight-medium);
+    border: none;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+}
+
+.btn-primary:focus {
+    background-color: var(--primary-light);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-light);
+}
+
+/* BUTTON SECONDARY */
+
+.btn-secondary {
+    background-color: var(--gray-2);
+    color: var(--gray-1);
+}
+
+.btn-secondary:focus {
+    background-color: var(--white);
+    box-shadow: 0px 4px 19px rgba(0, 0, 0, 0.05) !important;
+    color: var(--gray-1);
+}
+
+.btn-secondary:hover {
+    background-color: var(--white) !important;
+    box-shadow: 0px 4px 19px rgba(0, 0, 0, 0.05) !important;
+    color: var(--gray-1);
+}
+
+/* PRUEBA */
+/* h3 {
+    text-align: center;
+    margin: 5px 20px;
+    color: var(--dark-brown);
+    font-size: var(--header-3);
+    font-weight: var(--font-weight-semi-bold);
+    line-height: 74px;
+} */
+
+.carousel-indicators {
+    position: unset;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    padding: 1em;
+  }
+  .carousel-indicators [data-bs-target] {
+    text-indent: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    background-color: transparent;
+    border-bottom: 1px solid var(--primary);
+    border-top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .carousel-indicators [data-bs-target].active {
+    color: darkgoldenrod;
+  }
+  .carousel {
+    background-color: #f8f9fa;
+  }
+  .carousel-inner img {
+    max-height: 400px;
+    max-width: 100%;
+    padding: 1em;
+    margin-inline: auto;
+  }
+  @media screen and (min-width: 576px) {
+    .carousel {
+      padding: 2em;
+      font-size: 1.3em;
+    }
+  }
